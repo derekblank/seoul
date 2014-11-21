@@ -8,7 +8,7 @@ Areas of interest include:
  - Module-based Javascript architecture: `app/scripts`
  - Efficient Sass: `app/styles/base/component/_hero.scss`
  
-Content is based on neighborhoods in Seoul, Korea.
+Content is based on neighborhoods in Seoul, Korea. This repository is web-accessible at [http://derekblank.github.io/seoul/](http://derekblank.github.io/seoul/).
 
 ## Project Setup
 If you do not have [Node.js](http://nodejs.org/) `>=0.10`, [Yeoman](http://yeoman.io/) `>=1.1.2`, [Ruby](https://www.ruby-lang.org/en/) `>=1.9` and the [Bundler](http://bundler.io/) gem installed, you must do that first. Once you have installed these dependencies, you may:
