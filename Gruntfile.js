@@ -276,7 +276,7 @@ module.exports = function (grunt) {
           commit: true,
           push: true,
           message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
-          remote: 'git@github.com:derekblank/db-seoul.git',
+          remote: 'git@github.com:derekblank/seoul.git',
           branch: 'gh-pages'
         }
       }
@@ -287,19 +287,19 @@ module.exports = function (grunt) {
           patterns: [
             {
               match: /("|'?)\/?styles\//g,
-              replacement: '$1http://derekblank.github.io/db-seoul/styles/'
+              replacement: '$1http://derekblank.github.io/seoul/styles/'
             },
             {
               match: /("|'?)\/?scripts\//g,
-              replacement: '$1http://derekblank.github.io/db-seoul/scripts/'
+              replacement: '$1http://derekblank.github.io/seoul/scripts/'
             },
             {
               match: /(<a[^>]*href="?)(\/)/g,
-              replacement: '$1http://derekblank.github.io/db-seoul/'
+              replacement: '$1http://derekblank.github.io/seoul/'
             },
             {
               match: /(<form[^>]*action="?)(\/)/g,
-              replacement: '$1http://derekblank.github.io/db-seoul/'
+              replacement: '$1http://derekblank.github.io/seoul/'
             }
           ]
         },
@@ -379,16 +379,8 @@ module.exports = function (grunt) {
     'csslint:check'
   ]);
 
-  // No real tests yet. Add your own.
-  grunt.registerTask('test', [
-    // 'clean:server',
-    // 'concurrent:test',
-    // 'connect:test'
-  ]);
-
   grunt.registerTask('build', [
     'clean:dist',
-    // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
     'concurrent:dist',
     'copy:assemble',
@@ -404,14 +396,8 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('deploy', [
-    'default',
+    'build',
     'replace',
     'buildcontrol'
-  ]);
-
-  grunt.registerTask('default', [
-    'check',
-    'test',
-    'build'
   ]);
 };
