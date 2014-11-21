@@ -1,0 +1,9 @@
+.article--neighborhood {
+  margin: 0 auto;
+  padding: 1em 0;
+  width: 100%;
+  
+  @include media($medium) {
+    padding: 12em 0;
+  }
+}

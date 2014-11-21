@@ -1,0 +1,36 @@
+.division--parallax {
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: block;
+  height: 12em;
+  position: relative;
+  text-align: center;
+
+  @include media($medium) {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
+    min-height: 100%;
+    text-align: left;
+  }
+}
+
+$neighborhood-list: apgujeong, jongno, namsan, sinchon;
+
+@each $item in $neighborhood-list {
+  .#{$item} {
+    background-image: url('/images/#{$item}.jpg');
+    background-repeat: no-repeat;
+  }
+}
+
+.parallax__unit {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  
+  .mega {
+    margin-top: -.5em;
+  }
+}
