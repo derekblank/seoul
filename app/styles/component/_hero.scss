@@ -19,7 +19,7 @@ $neighborhood-list: apgujeong, jongno, namsan, sinchon;
 
 @each $item in $neighborhood-list {
   .#{$item} {
-    background-image: url('/images/#{$item}.jpg');
+    background-image: url('../images/#{$item}.jpg');
     background-repeat: no-repeat;
   }
 }
