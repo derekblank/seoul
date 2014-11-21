@@ -6,6 +6,7 @@ Areas of interest include:
 
  - UI components: `app/index.html` and `app/includes/component/neighborhood.html`
  - Module-based Javascript architecture: `app/scripts`
+ - Efficient Sass: `app/styles/base/component/_hero.scss`
  
 Content is based on neighborhoods in Seoul, Korea.
 
@@ -20,11 +21,11 @@ If you do not have [Node.js](http://nodejs.org/) `>=0.10`, [Yeoman](http://yeoma
 
 ## Usage
 ### Grunt Tasks
-##### grunt serve
+##### `grunt serve`
 Serve your source locally into your browser. LiveReload will automatically load any changes to HTML, CSS and JavaScript that you make.
 
-##### grunt build
+##### `grunt build`
 Build the concatenated, minified production version of the source into the `dist` directory.
 
-##### grunt deploy
+##### `grunt deploy`
 Deploy the production version of the source to [GitHub Pages](http://pages.github.com/) via [grunt-build-control](https://github.com/robwierzbowski/grunt-build-control).
